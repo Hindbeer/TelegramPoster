@@ -1,0 +1,42 @@
+﻿<Window x:Class="CazzatePoster.Views.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CazzatePoster.Views" xmlns:viewmodels="clr-namespace:CazzatePoster.ViewModels"
+        mc:Ignorable="d"
+        Title="Settings" Height="275" Width="645" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" WindowState="Normal">
+    <Window.DataContext>
+        <viewmodels:SettingsViewModel/>
+    </Window.DataContext>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="76"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Column="0">
+            <StackPanel Margin="15, 15, 15, 0">
+                <TextBlock Text="Application settings" FontSize="36px" FontFamily="Outfit Medium" />
+                <Border BorderThickness="0,1,0,0" BorderBrush="#C6C6C6" Margin="0,15,0,0"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="15">
+                    <TextBlock FontFamily="Outfit Medium" Text="Your channel tag:" FontSize="24"/>
+                    <TextBox Width="400" Margin="13,0,0,0" Text="{Binding UserChanelId}"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="15, 0, 0, 0">
+                    <TextBlock FontFamily="Outfit Medium" Text="Your bot token:" FontSize="24"/>
+                    <TextBox Width="400" Margin="38,0,0,0" Text="{Binding UserToken}"/>
+                </StackPanel>
+                <Button VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="150" Height="40" Margin="15" Content="Save" Command="{Binding SaveButton}"/>
+            </StackPanel>
+            
+            
+        </Grid>
+    </Grid>
+</Window>
