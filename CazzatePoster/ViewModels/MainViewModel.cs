@@ -1,6 +1,5 @@
 ﻿using System.Windows.Input;
 using CazzatePoster.Models;
-using CazzatePoster.Views;
 
 namespace CazzatePoster.ViewModels
 {
@@ -27,6 +26,8 @@ namespace CazzatePoster.ViewModels
                 return new RelayCommand((obj) => _botModel.SendMessage(text: PostText, chatId: _settings.ChanelId, token: _settings.BotToken));
             }
         }
+
+        // TODO: Доделать меню настроек
 
         //public ICommand SettingsButton
         //{

@@ -1,6 +1,4 @@
 ﻿using CazzatePoster.Models;
-using System;
-using System.Windows.Input;
 
 namespace CazzatePoster.ViewModels
 {
